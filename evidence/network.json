@@ -1,0 +1,35 @@
+[
+  {
+    "event_id": "NET-001",
+    "timestamp": "2026-02-18T09:13:03Z",
+    "host": "WS-17",
+    "activity": "dns_query",
+    "description": "DNS request for lab-only example domain.",
+    "source_ref": "NET-001/dns-log",
+    "indicators": [
+      "telemetry.example"
+    ]
+  },
+  {
+    "event_id": "NET-002",
+    "timestamp": "2026-02-18T09:18:03Z",
+    "host": "WS-17",
+    "activity": "tls_flow",
+    "description": "Outbound TLS flow to documentation-range IP; payload unavailable.",
+    "source_ref": "NET-002/flow-log",
+    "indicators": [
+      "203.0.113.77:443"
+    ]
+  },
+  {
+    "event_id": "NET-003",
+    "timestamp": "2026-02-18T09:18:26Z",
+    "host": "WS-17",
+    "activity": "egress_volume",
+    "description": "Outbound transfer volume exceeded workstation baseline in synthetic flow summary.",
+    "source_ref": "NET-003/flow-log",
+    "indicators": [
+      "203.0.113.77:443"
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "event_id": "DSK-001",
+    "timestamp": "2026-02-18T09:12:11Z",
+    "host": "WS-17",
+    "activity": "file_create",
+    "description": "Script file created in user temporary directory (synthetic).",
+    "source_ref": "DSK-001/file-metadata",
+    "indicators": [
+      "C:\\Users\\analyst\\AppData\\Local\\Temp\\stage.vbs"
+    ]
+  },
+  {
+    "event_id": "DSK-002",
+    "timestamp": "2026-02-18T09:14:42Z",
+    "host": "WS-17",
+    "activity": "archive_create",
+    "description": "Archive containing test documents created under user profile.",
+    "source_ref": "DSK-002/file-metadata",
+    "indicators": [
+      "C:\\Users\\analyst\\AppData\\Local\\Temp\\bundle.zip"
+    ]
+  },
+  {
+    "event_id": "DSK-003",
+    "timestamp": "2026-02-18T09:19:10Z",
+    "host": "WS-17",
+    "activity": "file_delete",
+    "description": "Temporary script removed after network activity.",
+    "source_ref": "DSK-003/file-metadata",
+    "indicators": [
+      "stage.vbs"
+    ]
+  }
+]

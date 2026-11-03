@@ -1,0 +1,18 @@
+{
+  "case_id": "IR-2026-017",
+  "classification": "SYNTHETIC TRAINING DATA",
+  "files": [
+    {
+      "path": "memory.json",
+      "sha256": "819c38348019cbe28de15abfe53e235219d31729b9ebf31a3acf497092afec15"
+    },
+    {
+      "path": "disk.json",
+      "sha256": "b2d8e9050c1f62a4b2554e0b9c3d41db68058b04591b5b3be4ee2cdb4c56e6f7"
+    },
+    {
+      "path": "network.json",
+      "sha256": "4d83a567e17d69c67a93d613acdd7a4c455df7bc44142ab7256ee35b175b05ec"
+    }
+  ]
+}

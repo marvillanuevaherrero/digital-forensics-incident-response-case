@@ -1,0 +1,36 @@
+[
+  {
+    "event_id": "MEM-001",
+    "timestamp": "2026-02-18T09:12:03Z",
+    "host": "WS-17",
+    "activity": "process_start",
+    "description": "Office process spawned PowerShell with encoded command-line argument (synthetic).",
+    "source_ref": "MEM-001/process-tree",
+    "indicators": [
+      "powershell.exe",
+      "-EncodedCommand"
+    ]
+  },
+  {
+    "event_id": "MEM-002",
+    "timestamp": "2026-02-18T09:12:18Z",
+    "host": "WS-17",
+    "activity": "process_start",
+    "description": "PowerShell child process launched a scripting runtime (synthetic).",
+    "source_ref": "MEM-002/process-tree",
+    "indicators": [
+      "wscript.exe"
+    ]
+  },
+  {
+    "event_id": "MEM-003",
+    "timestamp": "2026-02-18T09:18:02Z",
+    "host": "WS-17",
+    "activity": "network_socket",
+    "description": "Scripting process observed with outbound TCP socket to documentation-range address.",
+    "source_ref": "MEM-003/socket-table",
+    "indicators": [
+      "203.0.113.77:443"
+    ]
+  }
+]

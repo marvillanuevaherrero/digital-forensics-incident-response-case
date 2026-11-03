@@ -1,0 +1,150 @@
+{
+  "case_id": "IR-2026-017",
+  "synthetic": true,
+  "integrity": {
+    "files": [
+      {
+        "path": "memory.json",
+        "sha256": "819c38348019cbe28de15abfe53e235219d31729b9ebf31a3acf497092afec15",
+        "verified": true
+      },
+      {
+        "path": "disk.json",
+        "sha256": "b2d8e9050c1f62a4b2554e0b9c3d41db68058b04591b5b3be4ee2cdb4c56e6f7",
+        "verified": true
+      },
+      {
+        "path": "network.json",
+        "sha256": "4d83a567e17d69c67a93d613acdd7a4c455df7bc44142ab7256ee35b175b05ec",
+        "verified": true
+      }
+    ],
+    "verified": true
+  },
+  "events": [
+    {
+      "event_id": "MEM-001",
+      "timestamp": "2026-02-18T09:12:03Z",
+      "host": "WS-17",
+      "activity": "process_start",
+      "description": "Office process spawned PowerShell with encoded command-line argument (synthetic).",
+      "source_ref": "MEM-001/process-tree",
+      "indicators": [
+        "powershell.exe",
+        "-EncodedCommand"
+      ],
+      "source": "memory"
+    },
+    {
+      "event_id": "DSK-001",
+      "timestamp": "2026-02-18T09:12:11Z",
+      "host": "WS-17",
+      "activity": "file_create",
+      "description": "Script file created in user temporary directory (synthetic).",
+      "source_ref": "DSK-001/file-metadata",
+      "indicators": [
+        "C:\\Users\\analyst\\AppData\\Local\\Temp\\stage.vbs"
+      ],
+      "source": "disk"
+    },
+    {
+      "event_id": "MEM-002",
+      "timestamp": "2026-02-18T09:12:18Z",
+      "host": "WS-17",
+      "activity": "process_start",
+      "description": "PowerShell child process launched a scripting runtime (synthetic).",
+      "source_ref": "MEM-002/process-tree",
+      "indicators": [
+        "wscript.exe"
+      ],
+      "source": "memory"
+    },
+    {
+      "event_id": "NET-001",
+      "timestamp": "2026-02-18T09:13:03Z",
+      "host": "WS-17",
+      "activity": "dns_query",
+      "description": "DNS request for lab-only example domain.",
+      "source_ref": "NET-001/dns-log",
+      "indicators": [
+        "telemetry.example"
+      ],
+      "source": "network"
+    },
+    {
+      "event_id": "DSK-002",
+      "timestamp": "2026-02-18T09:14:42Z",
+      "host": "WS-17",
+      "activity": "archive_create",
+      "description": "Archive containing test documents created under user profile.",
+      "source_ref": "DSK-002/file-metadata",
+      "indicators": [
+        "C:\\Users\\analyst\\AppData\\Local\\Temp\\bundle.zip"
+      ],
+      "source": "disk"
+    },
+    {
+      "event_id": "MEM-003",
+      "timestamp": "2026-02-18T09:18:02Z",
+      "host": "WS-17",
+      "activity": "network_socket",
+      "description": "Scripting process observed with outbound TCP socket to documentation-range address.",
+      "source_ref": "MEM-003/socket-table",
+      "indicators": [
+        "203.0.113.77:443"
+      ],
+      "source": "memory"
+    },
+    {
+      "event_id": "NET-002",
+      "timestamp": "2026-02-18T09:18:03Z",
+      "host": "WS-17",
+      "activity": "tls_flow",
+      "description": "Outbound TLS flow to documentation-range IP; payload unavailable.",
+      "source_ref": "NET-002/flow-log",
+      "indicators": [
+        "203.0.113.77:443"
+      ],
+      "source": "network"
+    },
+    {
+      "event_id": "NET-003",
+      "timestamp": "2026-02-18T09:18:26Z",
+      "host": "WS-17",
+      "activity": "egress_volume",
+      "description": "Outbound transfer volume exceeded workstation baseline in synthetic flow summary.",
+      "source_ref": "NET-003/flow-log",
+      "indicators": [
+        "203.0.113.77:443"
+      ],
+      "source": "network"
+    },
+    {
+      "event_id": "DSK-003",
+      "timestamp": "2026-02-18T09:19:10Z",
+      "host": "WS-17",
+      "activity": "file_delete",
+      "description": "Temporary script removed after network activity.",
+      "source_ref": "DSK-003/file-metadata",
+      "indicators": [
+        "stage.vbs"
+      ],
+      "source": "disk"
+    }
+  ],
+  "indicators": [
+    "-EncodedCommand",
+    "203.0.113.77:443",
+    "C:\\Users\\analyst\\AppData\\Local\\Temp\\bundle.zip",
+    "C:\\Users\\analyst\\AppData\\Local\\Temp\\stage.vbs",
+    "powershell.exe",
+    "stage.vbs",
+    "telemetry.example",
+    "wscript.exe"
+  ],
+  "counts": {
+    "memory": 3,
+    "disk": 3,
+    "network": 3
+  }
+}
